@@ -299,7 +299,7 @@
             int difference = diff(n);
             postorder(n.left);
             postorder(n.right);
-            System.out.print("Node="+n.data +" " + "NodeDiff="+difference+" | ");
+            System.out.print("Node="+n.data +" " + "Diff="+difference+" | ");
         }
     }
     
@@ -317,8 +317,8 @@
         AVLTree avlt = new AVLTree(values); 
         System.out.println(avlt); //Print the tree with each node height difference
         avlt.printHeight(); //Print the height of the tree
-        avlt.findValue(1);
-        avlt.findValue(4);
+        avlt.findValue(1); //Find 1 in the AVL Tree
+        avlt.findValue(4); //Find 4 in the AVL Tree
                   
     }
  }
