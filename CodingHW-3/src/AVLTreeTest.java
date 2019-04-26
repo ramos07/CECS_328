@@ -268,13 +268,13 @@
         
         while ((n != null) && !found) //keep running this while the node is not null and the node hasn't been found
         {
-            Comparable rval = n.data;
+            Comparable rootValue = n.data;
             
-            if (val.compareTo(rval) < 0)
+            if (val.compareTo(rootValue) < 0)
             {
                 n = n.left;
             }
-            else if (val.compareTo(rval) > 0)
+            else if (val.compareTo(rootValue) > 0)
             {
                 n = n.right;
             }
@@ -314,9 +314,12 @@
      public static void main(String[] args)
     {            
         Comparable [] values = {14, 17, 11, 7, 53, 4, 13, 8};
-        AVLTree avlt = new AVLTree(values); 
+        AVLTree avlt = new AVLTree(values);  //construct AVL tree from array
+        System.out.println("POST ORDER");
         System.out.println(avlt); //Print the tree with each node height difference
+        System.out.println();
         avlt.printHeight(); //Print the height of the tree
+        System.out.println();
         avlt.findValue(1); //Find 1 in the AVL Tree
         avlt.findValue(4); //Find 4 in the AVL Tree
                   
